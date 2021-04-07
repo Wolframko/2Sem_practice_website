@@ -107,3 +107,38 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
+.checkout-card {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    margin: 10px;
+    float: left;
+}
+
+#card-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/25.jpg") no-repeat;
+    background-size: cover;
+}
+
+#card-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/28.jpg") no-repeat;
+    background-size: cover;
+}
+
+#card-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/30.jpg") no-repeat;
+    background-size: cover;
+}
+
+#card-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/36.jpg") no-repeat;
+    background-size: cover;
+}
+
+#card-5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/grm.jpg") no-repeat;
+    background-size: cover;
+}
