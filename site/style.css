@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+ul {
+    list-style-type: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+body {
+	margin:0 !important;
+	padding:0 !important;
+  font-family: Roboto, sans-serif;
+}
+
+nav li {
+  float: left;
+}
+nav li a:hover {
+  background-color: rgb(65, 13, 13);
+}
+
+.active {
+  background-color: #ca3623;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.background {
+  background: url(./images/avtoservis.jpg) no-repeat 40% 60%;
+  background-size: cover;
+}
+.promo {
+  height: 20%;
+  background-size: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) 40% 60%;
+  color: white;
+  text-align: center;
+}
+.promo h1 {
+  position: relative;
+  padding-top: 2%;
+}
+div.inline {
+  float: left;
+  width: 30%;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+.clearBoth {
+  clear: both;
+}
+
+.gallery div {
+  height: 400px;
+  margin-left: 2%;
+  width: 30%;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
