@@ -1,78 +1,109 @@
 @font-face {
-  font-family: Roboto;
-  src: url(fonts/Roboto-Regular.ttf);
+    font-family: Roboto;
+    src: url(fonts/Roboto-Regular.ttf);
 }
+
 ul {
     list-style-type: none;
 }
+
 nav ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
+
 body {
-	margin:0 !important;
-	padding:0 !important;
-  font-family: Roboto, sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: Roboto, sans-serif;
 }
 
 nav li {
-  float: left;
+    float: left;
 }
+
 nav li a:hover {
-  background-color: rgb(65, 13, 13);
+    background-color: rgb(65, 13, 13);
 }
 
 .active {
-  background-color: #ca3623;
+    background-color: #ca3623;
 }
+
 nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
 .background {
-  background: url(./images/avtoservis.jpg) no-repeat 40% 60%;
-  background-size: cover;
+    background: url(./images/avtoservis.jpg) no-repeat 40% 60%;
+    background-size: cover;
 }
+
 .promo {
-  height: 20%;
-  background-size: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) 40% 60%;
-  color: white;
-  text-align: center;
+    height: 20%;
+    background-size: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) 40% 60%;
+    color: white;
+    text-align: center;
 }
+
 .promo h1 {
-  position: relative;
-  padding-top: 2%;
+    position: relative;
+    padding-top: 2%;
 }
+
 div.inline {
-  float: left;
-  width: 30%;
+    float: left;
+    width: 30%;
 }
+
 footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: #333;
-  color: white;
-  text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
 }
+
 .clearBoth {
-  clear: both;
+    clear: both;
 }
 
 .gallery div {
-  height: 400px;
-  margin-left: 2%;
-  width: 30%;
+    height: 400px;
+    margin-left: 2%;
+    width: 30%;
 }
+
 .gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+table {
+    width: 100%;
+    border: 3px solid purple;
+    table-layout: fixed;
+    background: url("images/mclaren.jpg") no-repeat 40% 50%;
+    background-size: cover;
+    color: white;
+}
+
+th {
+    background-color: #ca3623;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
