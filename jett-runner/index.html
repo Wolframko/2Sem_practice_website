@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jett Run — пиксельная Джетт</title>
+    <meta name="description" content="Пиксельная Джетт из VALORANT бежит, прыгает и уклоняется от препятствий — анимация и мини-игра в стиле динозаврика из Chrome.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%230f1923'/%3E%3Cpath d='M8 1l4 7-4 7-4-7z' fill='%2362d6ff'/%3E%3Cpath d='M8 4l2 4-2 4-2-4z' fill='%23ece8e1'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+    <header class="intro">
+        <p class="intro__tag">VALORANT · пиксель-арт</p>
+        <h1 class="intro__title">JETT <span>RUN</span></h1>
+        <p class="intro__text">
+            Джетт бежит по крышам на закате: перепрыгивает ящики и турели, проскальзывает под дронами
+            и делает рывок сквозь препятствия — как динозаврик в Chrome.
+        </p>
+    </header>
+
+    <div class="stage" id="stage">
+        <section class="game" id="game" data-mode="demo" data-paused="false" aria-label="Игра Jett Run">
+            <canvas class="game__screen" id="screen" width="360" height="128" role="img"
+                    aria-label="Пиксельная Джетт бежит, прыгает и уклоняется от препятствий"></canvas>
+
+            <div class="hud">
+                <div class="hud__rank"><span class="hud__rank-icon" aria-hidden="true"></span><span id="rank">ЖЕЛЕЗО</span></div>
+                <div class="hud__score">
+                    <span class="hud__best">HI <span id="best">00000</span></span>
+                    <span id="score">00000</span>
+                </div>
+            </div>
+
+            <div class="ability is-ready" id="ability" title="Рывок (Tailwind)">
+                <span class="ability__key">E</span>
+                <span class="ability__name">РЫВОК</span>
+            </div>
+
+            <p class="banner" id="banner" aria-live="polite"></p>
+
+            <div class="overlay overlay--demo">
+                <p class="overlay__title">JETT <span>RUN</span></p>
+                <p class="overlay__hint">Пробел или тап — играть</p>
+            </div>
+
+            <div class="overlay overlay--over" aria-live="polite">
+                <p class="overlay__title overlay__title--defeat">ПОРАЖЕНИЕ</p>
+                <p class="overlay__record" id="final-record" hidden>Новый рекорд!</p>
+                <dl class="overlay__stats">
+                    <div><dt>Счёт</dt><dd id="final-score">00000</dd></div>
+                    <div><dt>Рекорд</dt><dd id="final-best">00000</dd></div>
+                    <div><dt>Ранг</dt><dd id="final-rank">ЖЕЛЕЗО</dd></div>
+                </dl>
+                <div class="overlay__buttons">
+                    <button type="button" class="btn btn--primary" data-action="play">Ещё раунд</button>
+                    <button type="button" class="btn" data-action="demo">Демо</button>
+                </div>
+            </div>
+
+            <div class="overlay overlay--paused">
+                <p class="overlay__title">ПАУЗА</p>
+                <p class="overlay__hint">P или пробел — продолжить</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="touch" aria-hidden="true">
+        <button type="button" class="touch__btn" data-touch="down" tabindex="-1">▼ Подкат</button>
+        <button type="button" class="touch__btn touch__btn--dash" data-touch="dash" tabindex="-1">E Рывок</button>
+    </div>
+
+    <div class="toolbar">
+        <button type="button" class="btn btn--primary" data-action="play">Играть</button>
+        <button type="button" class="btn" data-action="demo">Автопилот</button>
+        <button type="button" class="btn" id="btn-pause" data-action="pause" aria-pressed="false">Пауза</button>
+        <button type="button" class="btn" id="btn-sound" data-action="sound" aria-pressed="true">Звук: вкл</button>
+    </div>
+
+    <section class="controls" aria-labelledby="controls-title">
+        <h2 class="controls__title" id="controls-title">Управление</h2>
+        <ul class="controls__list">
+            <li><span class="keys"><kbd>Пробел</kbd><kbd>↑</kbd></span> прыжок — чем дольше держишь, тем выше</li>
+            <li><span class="keys"><kbd>Пробел</kbd></span> в воздухе — парение (Drift)</li>
+            <li><span class="keys"><kbd>↓</kbd></span> пригнуться, в воздухе — быстро приземлиться</li>
+            <li><span class="keys"><kbd>E</kbd><kbd>Shift</kbd></span> рывок сквозь препятствие (Tailwind), перезарядка 5 с</li>
+            <li><span class="keys"><kbd>P</kbd><kbd>M</kbd></span> пауза и звук</li>
+        </ul>
+        <p class="controls__note">На телефоне: тап — прыжок, кнопки ▼ и E — подкат и рывок.</p>
+    </section>
+</main>
+
+<script src="sprites.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
